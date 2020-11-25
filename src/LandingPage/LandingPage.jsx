@@ -2,12 +2,19 @@ import React from "react";
 import NavBar from "./NavBar";
 import Cards from "./Cards";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Card, CardActionArea, CardMedia } from "@material-ui/core";
+import {
+  Grid,
+  Card,
+  CardActionArea,
+  CardMedia,
+  Divider,
+} from "@material-ui/core";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import KeyboardHideIcon from "@material-ui/icons/KeyboardHide";
 import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
 import NewsRight from "./NewsRight";
 import NewsLeft from "./NewsLeft";
+import Footer from "./Footer";
 
 const useStyles = makeStyles({
   card: {
@@ -24,7 +31,6 @@ const useStyles = makeStyles({
     marginTop: "5%",
     display: "flex",
     "& div": {
-      width: "fit-content",
       background: "#b55b3d",
       margin: "1%",
       padding: "1%",
@@ -80,6 +86,8 @@ function LandingPage() {
         <NewsLeft />
         <NewsRight />
       </div>
+      <Divider />
+      <Footer />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
   Badge,
   MenuItem,
   Menu,
+  Button,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
@@ -179,7 +180,12 @@ function NavBar() {
             />
             <span style={{ marginLeft: "5px" }}>Trade NBA</span>
           </IconButton>
-          <div></div>
+          <div>TEAMS</div>
+          <div style={{ margin: "0 2%" }}>TRADE MACHINE</div>
+          <div>TRADES</div>
+          <div style={{ margin: "0 2%" }}>DRAFT</div>
+          <div>LISTS</div>
+          <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -193,11 +199,20 @@ function NavBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </div>
-          <div className={classes.grow} />
           <div>
-            <button>JOIN</button>
+            <Button
+              variant="outlined"
+              style={{
+                color: "white",
+                border: "1px solid white",
+                margin: "0 1%",
+                fontSize: "12px",
+              }}
+            >
+              JOIN
+            </Button>
           </div>
-          <div>LOGIN</div>
+          <Button style={{ color: "white" }}>LOGIN</Button>
           {/* <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">

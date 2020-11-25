@@ -1,13 +1,13 @@
 import React from "react";
 import { Typography, Divider, Card, Avatar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { transactions } from "./transactionsDetails";
+import { contracts } from "./contracts";
 
 const useStyles = makeStyles({
   container: {
     background: "#eeeeee",
     padding: "2%",
-    marginBottom: "2%",
+    margin: "12% 3%",
   },
   root: {
     marginLeft: "3%",
@@ -16,22 +16,33 @@ const useStyles = makeStyles({
     border: 0,
     borderRadius: 0,
     boxShadow: "none",
-    marginTop: "2%",
+    marginTop: "5%",
   },
   details: {
     display: "flex",
     flexDirection: "column",
   },
+  title: {
+    display: "flex",
+    flexWrap: "nowrap",
+    margin: "5% 0",
+  },
 });
 
-function Transactions() {
+function Contracts() {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
-      <Typography variant="h5">Latest Transactions</Typography>
+      <div className={classes.title}>
+        <Typography variant="h6">Top Contracts</Typography>
+        <Typography style={{ marginLeft: "auto", marginTop: "2%" }}>
+          View All
+        </Typography>
+      </div>
+
       <Divider />
-      {transactions.map((item) => (
+      {contracts.map((item) => (
         <>
           <Card className={classes.root}>
             <Avatar
@@ -41,7 +52,7 @@ function Transactions() {
             />
             <div className={classes.details}>
               <h6 style={{ fontSize: "14px" }}>{item.name}</h6>
-              <div style={{ fontSize: "15px" }}>{item.details}</div>
+              <div style={{ fontSize: "15px" }}>{item.amt}</div>
             </div>
             <div className={classes.details} style={{ marginLeft: "auto" }}>
               <Avatar
@@ -58,4 +69,4 @@ function Transactions() {
   );
 }
 
-export default Transactions;
+export default Contracts;

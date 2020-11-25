@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card, Typography, Divider, Avatar } from "@material-ui/core";
 import WorkRoundedIcon from "@material-ui/icons/WorkRounded";
+import Contracts from "./Contracts/Contracts";
 
 const useStyles = makeStyles({
   container: {
@@ -49,6 +50,7 @@ function NewsRight() {
           </div>
         </div>
       </Card>
+      <Contracts />
     </div>
   );
 }

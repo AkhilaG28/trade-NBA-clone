@@ -51,10 +51,16 @@ function RecentUsers() {
                 {item.rating} GM rating, {item.trades} trades created
               </div>
             </div>
-            <div>
-              <Avatar alt={item.name} src={item.logo} />
+            <div className={classes.details} style={{ marginLeft: "auto" }}>
+              <Avatar
+                alt={item.name}
+                style={{ marginLeft: "auto" }}
+                src={item.logo}
+              />
+              <p style={{ fontSize: "13px", color: "grey" }}>
+                Joined {item.time}
+              </p>
             </div>
-            <div>Joined {item.time}</div>
           </Card>
         </>
       ))}
