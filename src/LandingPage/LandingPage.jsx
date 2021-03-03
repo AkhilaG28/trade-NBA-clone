@@ -13,7 +13,7 @@ import WhatshotIcon from "@material-ui/icons/Whatshot";
 import KeyboardHideIcon from "@material-ui/icons/KeyboardHide";
 import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
 import NewsRight from "./NewsRight";
-import NewsLeft from "./NewsLeft";
+// import NewsLeft from "./NewsLeft";
 import Footer from "./Footer";
 
 const useStyles = makeStyles({
@@ -83,7 +83,7 @@ function LandingPage() {
       </Grid>
       <Cards />
       <div className={classes.newsGrid}>
-        <NewsLeft />
+        {/* <NewsLeft /> */}
         <NewsRight />
       </div>
       <Divider />
